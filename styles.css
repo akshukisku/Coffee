@@ -18,6 +18,11 @@
   box-sizing: border-box;
   font-family: "Londrina Solid", sans-serif;
 }
+html,
+body {
+  height: 100%;
+  width: 100%;
+}
 ul {
   list-style: none;
 }
@@ -81,7 +86,7 @@ h2 {
 
 .navbar {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
   background: #2c2c2c;
   padding: 0 20px;
@@ -123,6 +128,7 @@ h2 {
   background: #2c2c2c;
   border-radius: 50%;
   padding: 10px;
+  flex-shrink: 0;
 }
 
 .navbar .logo img {
@@ -160,9 +166,10 @@ h2 {
 .heading {
   font-family: "Lostagen", sans-serif;
   position: absolute;
-  top: 200px;
-  left: 200px;
+  top: 120px;
+  left: 50%;
   text-align: center;
+  transform: translate(-50%);
 }
 .heading h1 {
   font-size: 26px;
@@ -183,7 +190,7 @@ h2 {
   text-align: center;
   letter-spacing: 10px;
   position: absolute;
-  top: 200px;
+  top: 300px;
   z-index: 0;
   line-height: 1;
 }
@@ -191,14 +198,14 @@ h2 {
 /* Coffee Cup */
 .coffe-mug {
   position: absolute;
-  top: 50%;
+  top: 60%;
   left: 50%;
   transform: translate(-50%, -50%);
   z-index: 1;
 }
 .coffe-mug img {
   width: auto;
-  /* max-width: 380px; */
+  max-width: 6700px;
   height: auto;
 }
 
@@ -256,6 +263,8 @@ h2 {
 .banner-2 {
   background-color: #fdf8f3;
   position: relative;
+  padding: 80px 0;
+  overflow: hidden;
 }
 .header-part {
   display: flex;
@@ -294,20 +303,22 @@ h2 {
 }
 .coffee-1 img {
   width: auto;
+  max-width: 400px;
   height: auto;
   /* max-width: 100px; */
 }
 .coffee-2 {
   position: absolute;
   top: 1%;
-  left: 70%;
+  left: 69%;
+  min-width: 280px;
   /* right: 5%;  */
   /* z-index: 1; */
 }
 .coffee-2 img {
-  width: auto;
+  /* Make the image fill its container fluidly */
+  width: 100%;
   height: auto;
-  /* max-width: 100px; */
 }
 /* menu -sectiomn */
 
@@ -603,32 +614,32 @@ h2 {
 }
 
 /* blog */
-.blog-section{
+.blog-section {
   /* background-color: #fdf8f3; */
   position: relative;
   overflow: hidden;
 }
-.art-1{
+.art-1 {
   position: absolute;
   top: 10%;
   left: 5%;
   /* z-index: 1; */
 }
-.art-1 img{
+.art-1 img {
   height: auto;
   width: auto;
 }
-.art-2 img{
+.art-2 img {
   height: auto;
   width: auto;
 }
-.art-2{
+.art-2 {
   position: absolute;
   bottom: 10%;
   right: 0.1%;
   /* z-index: 1; */
 }
-.blog-section .row{
+.blog-section .row {
   justify-content: center;
 }
 .card {
@@ -645,8 +656,8 @@ h2 {
 }
 
 .card-img img {
-width: 100%;
-  display: block
+  width: 100%;
+  display: block;
 }
 
 .date-badge {
@@ -670,7 +681,7 @@ width: 100%;
   font-size: 16px;
   margin-bottom: 10px;
   text-transform: uppercase;
-  font-family: 'Lostagen';
+  font-family: "Lostagen";
 }
 
 .card-content p {
@@ -678,7 +689,7 @@ width: 100%;
   color: #444;
   line-height: 1.4;
   margin-bottom: 10px;
-  font-family: 'Satoshi';
+  font-family: "Satoshi";
 }
 
 .read-more {
@@ -698,12 +709,12 @@ width: 100%;
   font-size: 12px;
   color: #666;
 }
-.card-content a{
-  font-family: 'Satoshi';
+.card-content a {
+  font-family: "Satoshi";
 }
 
-.card-footer span{
-  font-family: 'Satoshi';
+.card-footer span {
+  font-family: "Satoshi";
 }
 
 .card-footer i {
@@ -720,87 +731,139 @@ width: 100%;
   max-height: 320px;
 }
 
-footer{
+footer {
   background-color: #333333;
   padding-top: 20px;
   position: relative;
 }
-footer .row{
+footer .row {
   align-items: center;
   justify-content: space-between;
 }
-footer .col-33 img{
+footer .col-33 img {
   height: auto;
   width: auto;
 }
-footer .col-33{
+footer .col-33 {
   max-width: 250px;
   text-align: center;
 }
-footer .col-33 p{
+footer .col-33 p {
   margin-top: 10px;
-  font-family: 'Satoshi';
+  font-family: "Satoshi";
   font-size: 15px;
   color: #909090;
 }
-.vector-1{
+.vector-1 {
   position: absolute;
   top: 1%;
   left: -2%;
 }
-.vector-1 img{
+.vector-1 img {
   height: auto;
   width: auto;
   /* max-width: 300px; */
 }
-.vector-2{
+.vector-2 {
   position: absolute;
   bottom: 1%;
   right: 0.1%;
 }
-.vector-2 img{
+.vector-2 img {
   height: auto;
   width: auto;
   /* max-width: 300px; */
 }
-.last{
+.last {
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
-.part2{
+.part2 {
   border-top: 1px solid #555555;
   margin-top: 40px;
   padding: 20px 0;
 }
 
 @media (max-width: 768px) {
+  .navbar ul {
+    display: none;
+  }
+  .navbar .icons {
+    display: none;
+  }
+  .navbar {
+    width: 100%;
+    position: relative;
+  }
   .heading h1 {
     font-size: 18px;
   }
   .image-section h1 {
-    font-size: 28vw;
+    top: 55%;
+    font-size: 20vw;
   }
+
   .coffe-mug img {
-    width: 55vw;
+    width: 150vw;
   }
   .spoon {
-    right: 5%;
+    top: 60%;
+    right: 8%;
     bottom: 8%;
   }
   .spoon img {
-    width: 35vw;
+    width: 80vw;
   }
   .beans {
-    top: 10%;
+    top: 50%;
     left: 5%;
   }
   .beans img {
-    width: 30vw;
+    width: 80vw;
   }
   .lastly-section {
     flex-direction: column;
     text-align: center;
     gap: 12px;
+  }
+  .products-section .row {
+    flex-direction: column;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+  }
+  footer .row {
+    flex-direction: column;
+    gap: 20px;
+  }
+  .box-container {
+    flex-direction: column;
+    gap: 20px;
+  }
+  .middle-section {
+    flex-direction: column;
+    /* gap: 20px; */
+  }
+  .products-section .row .col {
+    max-width: 300px;
+    width: 100%;
+  }
+  .image-contain .image-box {
+    max-width: 100%;
+    width: 100%;
+  }
+  .image-contain .row {
+    gap: 10px;
+  }
+
+  .frame {
+    background-color: white;
+    height: 10vh;
+    background-size: contain;
+    background-position: center;
+  }
+  .middle-section {
+    order: -1;
   }
 }
