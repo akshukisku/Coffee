@@ -1,0 +1,806 @@
+@import url("https://fonts.googleapis.com/css2?family=League+Gothic&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Londrina+Solid:wght@100;300;400;900&display=swap");
+@font-face {
+  font-family: "Lostagen";
+  src: url("./fonts/Lostangen.ttf");
+}
+@font-face {
+  font-family: "Makutu";
+  src: url("./fonts/Makutu.ttf");
+}
+@font-face {
+  font-family: "Satoshi";
+  src: url("./fonts/Satoshi-Variable.ttf");
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Londrina Solid", sans-serif;
+}
+ul {
+  list-style: none;
+}
+
+a {
+  color: white;
+  display: inline-block;
+  text-decoration: none;
+  font-family: "League Gothic", sans-serif;
+}
+
+img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+h1 {
+  font-size: 60px;
+  letter-spacing: 1;
+  font-weight: 800;
+  color: var(--orange);
+}
+
+h2 {
+  font-size: 30px;
+  letter-spacing: 1;
+  font-weight: 600;
+}
+
+/* common  class*/
+.container {
+  max-width: 1140px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+.section-padding {
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 -15px;
+}
+.col {
+  padding: 0 15px;
+}
+
+.col-50 {
+  width: 50%;
+}
+
+.col-25 {
+  width: 25%;
+}
+
+/* navbar */
+
+.navbar {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background: #2c2c2c;
+  padding: 0 20px;
+  border-radius: 30px;
+  margin: 20px auto;
+  max-width: 800px;
+  height: 70px;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.navbar ul {
+  list-style: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+  align-items: center;
+}
+
+.navbar ul li {
+  margin: 0 15px;
+}
+
+.navbar ul li a {
+  text-decoration: none;
+  font-size: 17px;
+  font-weight: 100;
+}
+
+.navbar ul li a.active,
+.navbar ul li a:hover {
+  color: #d4a059;
+}
+
+.navbar .logo {
+  position: relative;
+  top: -5px;
+  background: #2c2c2c;
+  border-radius: 50%;
+  padding: 10px;
+}
+
+.navbar .logo img {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  /* background-color: rebeccapurple; */
+}
+
+.navbar .icons {
+  display: flex;
+  align-items: center;
+}
+
+.navbar .icons i {
+  color: #fff;
+  font-size: 16px;
+  margin-left: 15px;
+  cursor: pointer;
+}
+
+.navbar .icons i:hover {
+  color: #d4a059;
+}
+/* banner */
+.banner {
+  /* position: relative; */
+  width: 100%;
+  height: 100vh;
+  background: #fdf8f3; /* light cream background */
+  overflow: hidden;
+}
+
+/* Heading */
+.heading {
+  font-family: "Lostagen", sans-serif;
+  position: absolute;
+  top: 200px;
+  left: 200px;
+  text-align: center;
+}
+.heading h1 {
+  font-size: 26px;
+  letter-spacing: 2px;
+  color: #3b2b25;
+  margin-bottom: 10px;
+}
+.heading img {
+  width: auto;
+  height: auto;
+}
+
+/* Big COFFEE background */
+.image-section h1 {
+  font-family: "Makutu";
+  font-size: 18vw;
+  color: #e6c7b7;
+  text-align: center;
+  letter-spacing: 10px;
+  position: absolute;
+  top: 200px;
+  z-index: 0;
+  line-height: 1;
+}
+
+/* Coffee Cup */
+.coffe-mug {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+}
+.coffe-mug img {
+  width: auto;
+  /* max-width: 380px; */
+  height: auto;
+}
+
+/* Spoon (right side) */
+.spoon {
+  position: absolute;
+  top: 40%;
+  right: 15%;
+  z-index: 1;
+}
+.spoon img {
+  width: auto;
+  /* max-width: 300px;   */
+  height: auto;
+}
+
+/* Beans floating */
+.beans {
+  position: absolute;
+  top: 10%;
+  left: 20%;
+  z-index: 1;
+}
+.beans img {
+  width: auto;
+  /* max-width: 260px; */
+  height: auto;
+}
+
+/* Bottom Section */
+.lastly-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: absolute;
+  bottom: 1%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  max-width: 1200px;
+  font-family: "League Gothic", sans-serif;
+  color: #3b2b25;
+}
+.lastly-section h4 {
+  font-size: 16px;
+  letter-spacing: 2px;
+  margin-bottom: 5px;
+}
+.lastly-section p {
+  font-size: 14px;
+  letter-spacing: 1px;
+}
+
+/* banner2 */
+.banner-2 {
+  background-color: #fdf8f3;
+  position: relative;
+}
+.header-part {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  padding: 50px 20px; /* light cream background */
+}
+.header-part img {
+  width: auto;
+  height: auto;
+}
+
+.header-part h4 {
+  font-size: 40px;
+  color: #3b2b25;
+  text-align: center;
+  letter-spacing: 2px;
+  /* margin-top: 20px; */
+}
+.header-part p {
+  font-family: "Satoshi";
+  font-size: 16px;
+  color: #838080;
+  text-align: center;
+  /* letter-spacing: 1px; */
+  max-width: 640px;
+  font-weight: 500;
+}
+.coffee-1 {
+  position: absolute;
+  top: 20%;
+  left: 5%;
+  /* z-index: 1; */
+}
+.coffee-1 img {
+  width: auto;
+  height: auto;
+  /* max-width: 100px; */
+}
+.coffee-2 {
+  position: absolute;
+  top: 1%;
+  left: 70%;
+  /* right: 5%;  */
+  /* z-index: 1; */
+}
+.coffee-2 img {
+  width: auto;
+  height: auto;
+  /* max-width: 100px; */
+}
+/* menu -sectiomn */
+
+.menu-section {
+  background-color: #fdf8f3;
+  position: relative;
+  overflow: hidden;
+}
+.menu-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  /* max-width: 1000px; */
+  flex-wrap: wrap;
+}
+
+.menu-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  gap: 5px;
+  width: 100%;
+  /* border-bottom: 1px dashed #ccc; */
+  padding: 15px 10px;
+  /* background-color: red; */
+  max-width: 400px;
+  /* min-height: 90px;  */
+}
+
+.menu-item img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+
+.menu-info {
+  flex: 1;
+  /* text-align: left; */
+}
+
+.menu-info h4 {
+  font-size: 16px;
+  color: #3a2c20;
+}
+
+.menu-info p {
+  margin: 5px 0 0;
+  font-size: 13px;
+  color: #666;
+}
+
+.price {
+  font-weight: bold;
+  color: #b14b2c;
+  white-space: nowrap;
+}
+
+.cookies {
+  position: absolute;
+  /* z-index: 1; */
+  left: -300px;
+}
+.cookies img {
+  width: auto;
+  height: auto;
+  /* max-width: 100px; */
+}
+
+.coofe-spon {
+  position: absolute;
+  /* z-index: 1; */
+  bottom: -2%;
+  left: 80%;
+}
+.coofe-spon img {
+  width: auto;
+  height: auto;
+  /* max-width: 100px; */
+}
+
+/* Products */
+.text-section {
+  text-align: center;
+}
+.text-section a {
+  font-family: "Lostagen";
+  border: 1px solid #1a1a1a;
+  padding: 15px 30px;
+  border-radius: 5px;
+  font-size: 16px;
+  color: black;
+}
+.box-img {
+  /* background-color: #EBDCC0; */
+  border-radius: 10px;
+}
+.box-img-1 {
+  background-color: #ebdcc0;
+  border-radius: 10px;
+}
+.box-img-1 img {
+  max-width: 800px;
+}
+.text-section p {
+  font-family: "Makutu";
+  font-size: 23px;
+  color: #ce8a4b;
+  margin: 5px 0;
+}
+.text-section h4 {
+  font-family: "Lostagen";
+  font-size: 22px;
+  color: #3b2b25;
+  margin: 10px 0;
+}
+/* table */
+.table-section {
+  background: #f4f1e7;
+  position: relative;
+}
+.form-container {
+  width: auto;
+  padding: 30px;
+  border-radius: 8px;
+}
+
+.form-flex {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.input-box {
+  flex: 1 1 calc(50% - 15px); /* 2 columns */
+  position: relative;
+  border: 1px solid #a87c4f;
+  border-radius: 3px;
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  background: #f4f1e7;
+  min-width: 20px;
+}
+
+.input-box i {
+  margin-right: 8px;
+  color: #a87c4f;
+}
+
+.input-box input,
+.input-box select,
+.message-box textarea {
+  border: none;
+  outline: none;
+  background: transparent;
+  width: 100%;
+  font-size: 14px;
+  color: #333;
+  font-family: "Satoshi";
+  font-weight: 500;
+}
+
+.message-box {
+  flex: 1 1 100%; /* Full width */
+  border: 1px solid #a87c4f;
+  border-radius: 3px;
+  padding: 10px;
+  display: flex;
+  align-items: flex-start;
+}
+
+.message-box i {
+  margin-right: 8px;
+  margin-top: 4px;
+  color: #a87c4f;
+}
+
+.message-box textarea {
+  height: 80px;
+  resize: none;
+}
+
+.table-vector {
+  position: absolute;
+  top: 70%;
+  left: -0.5%;
+}
+.table-vector img {
+  height: auto;
+  width: auto;
+}
+.table-vector-1 {
+  position: absolute;
+  bottom: 60%;
+  right: 10%;
+}
+.table-vector-1 img {
+  height: auto;
+  width: auto;
+}
+
+/* visitor-section */
+.visitor-section {
+  position: relative;
+  overflow: hidden;
+}
+.box-review {
+  background-color: #f5f1ec;
+  border-radius: 10px;
+  padding: 20px;
+  margin: 20px 0;
+  max-width: 500px;
+}
+
+.box-review h4 {
+  font-family: "Satoshi";
+  font-size: 16px;
+  color: #838080;
+  margin-bottom: 10px;
+  font-weight: 500;
+  line-height: 35px;
+}
+.box-review p {
+  font-family: "Lostagen";
+  font-size: 20px;
+  color: #4e3120;
+  font-weight: 100;
+}
+.box-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 30px;
+}
+.middle-section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  /* margin-top: 30px; */
+}
+
+.box-container i {
+  font-size: 30px;
+  color: #ce8a4b;
+}
+
+.left-section,
+.right-section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 5px 10px;
+  background-color: #efead9;
+  border-radius: 10px;
+}
+
+.cooffee {
+  position: absolute;
+  top: 30%;
+  left: 10%;
+  transform: translateY(-50%);
+  z-index: 1;
+}
+.cooffee img {
+  width: auto;
+  height: auto;
+  /* max-width: 300px; */
+}
+.cokies {
+  position: absolute;
+  bottom: 40%;
+  right: 10%;
+  transform: translateY(-50%);
+  z-index: 1;
+}
+.cokies img {
+  width: auto;
+  height: auto;
+  /* max-width: 300px; */
+}
+
+/*  frame*/
+.frame {
+  height: 90vh;
+  background-color: red;
+  background-size: cover;
+  /* background-position: center; */
+  background-image: url("./images/frame-aprt2.png");
+  background-repeat: no-repeat;
+}
+
+/* blog */
+.blog-section{
+  /* background-color: #fdf8f3; */
+  position: relative;
+  overflow: hidden;
+}
+.art-1{
+  position: absolute;
+  top: 10%;
+  left: 5%;
+  /* z-index: 1; */
+}
+.art-1 img{
+  height: auto;
+  width: auto;
+}
+.art-2 img{
+  height: auto;
+  width: auto;
+}
+.art-2{
+  position: absolute;
+  bottom: 10%;
+  right: 0.1%;
+  /* z-index: 1; */
+}
+.blog-section .row{
+  justify-content: center;
+}
+.card {
+  width: 310px;
+  background: #fffaf0;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.card-img {
+  position: relative;
+  max-width: 330px;
+}
+
+.card-img img {
+width: 100%;
+  display: block
+}
+
+.date-badge {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background: #d2691e;
+  color: white;
+  font-size: 12px;
+  font-weight: bold;
+  padding: 6px 10px;
+  border-radius: 4px;
+  text-align: center;
+}
+
+.card-content {
+  padding: 15px;
+}
+
+.card-content h3 {
+  font-size: 16px;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+  font-family: 'Lostagen';
+}
+
+.card-content p {
+  font-size: 13px;
+  color: #444;
+  line-height: 1.4;
+  margin-bottom: 10px;
+  font-family: 'Satoshi';
+}
+
+.read-more {
+  font-size: 13px;
+  font-weight: bold;
+  color: #d2691e;
+  text-decoration: none;
+  display: inline-block;
+  margin-bottom: 10px;
+}
+
+.card-footer {
+  border-top: 1px solid #ddd;
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 15px;
+  font-size: 12px;
+  color: #666;
+}
+.card-content a{
+  font-family: 'Satoshi';
+}
+
+.card-footer span{
+  font-family: 'Satoshi';
+}
+
+.card-footer i {
+  margin-right: 5px;
+  color: #d2691e;
+}
+
+/* image-contain */
+.image-contain {
+  overflow: hidden;
+}
+.image-contain .image-box {
+  max-width: 300px;
+  max-height: 320px;
+}
+
+footer{
+  background-color: #333333;
+  padding-top: 20px;
+  position: relative;
+}
+footer .row{
+  align-items: center;
+  justify-content: space-between;
+}
+footer .col-33 img{
+  height: auto;
+  width: auto;
+}
+footer .col-33{
+  max-width: 250px;
+  text-align: center;
+}
+footer .col-33 p{
+  margin-top: 10px;
+  font-family: 'Satoshi';
+  font-size: 15px;
+  color: #909090;
+}
+.vector-1{
+  position: absolute;
+  top: 1%;
+  left: -2%;
+}
+.vector-1 img{
+  height: auto;
+  width: auto;
+  /* max-width: 300px; */
+}
+.vector-2{
+  position: absolute;
+  bottom: 1%;
+  right: 0.1%;
+}
+.vector-2 img{
+  height: auto;
+  width: auto;
+  /* max-width: 300px; */
+}
+.last{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.part2{
+  border-top: 1px solid #555555;
+  margin-top: 40px;
+  padding: 20px 0;
+}
+
+@media (max-width: 768px) {
+  .heading h1 {
+    font-size: 18px;
+  }
+  .image-section h1 {
+    font-size: 28vw;
+  }
+  .coffe-mug img {
+    width: 55vw;
+  }
+  .spoon {
+    right: 5%;
+    bottom: 8%;
+  }
+  .spoon img {
+    width: 35vw;
+  }
+  .beans {
+    top: 10%;
+    left: 5%;
+  }
+  .beans img {
+    width: 30vw;
+  }
+  .lastly-section {
+    flex-direction: column;
+    text-align: center;
+    gap: 12px;
+  }
+}
